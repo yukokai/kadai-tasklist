@@ -33,7 +33,7 @@ class TasksController extends Controller
     {
         $task = new Task;
 
-        // メッセージ作成ビューを表示
+        // タスク作成ビューを表示
         return view('tasks.create', [
             'task' => $task,
         ]);
@@ -85,7 +85,7 @@ class TasksController extends Controller
         // idの値でメッセージを検索して取得
         $task = Task::findOrFail($id);
 
-        // メッセージ編集ビューでそれを表示
+        // タスク編集ビューでそれを表示
         return view('tasks.edit', [
             'task' => $task,
         ]);
